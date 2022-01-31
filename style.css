@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    min-height: 100vh;
+}
+
+.wrapper {
+    position: absolute;
+    width: 300px;
+    background-color: rgba(220, 220, 220, 0.151);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    box-shadow: 2px 2px 4px rgb(71, 70, 70);
+    visibility: hidden;
+}
+
+.wrapper .menu {
+    padding: 10px;
+}
+
+.content .item {
+    list-style: none;
+    /* background-color: whitesmoke; */
+    font-size: 22px;
+    border-radius: 5px;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.content .item:hover {
+    background-color: rgba(187, 186, 187, 0.212);
+}
+
+.content .item span {
+    font-size: 19px;
+    margin-left: 8px;
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.content .setting {
+    display: flex;
+    border-top: 1px solid rgb(179, 172, 172);
+    padding: 10px;
+
+}
+
+.content .share {
+    justify-content: space-between;
+    position: relative;
+}
+
+.share .share-menu {
+    background-color: rgba(255, 255, 255, 0.973);
+    position: absolute;
+    right: -200px;
+    top: -50px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgb(207, 205, 205);
+    border: 1px solid rgba(128, 128, 128, 0.164);
+    opacity: 0;
+    /* pointer-events: none; */
+    transition: 0.2s ease;
+    padding: 10px;
+}
+
+.share .share-menu li {
+    background-color:transparent;
+}
+
+.share:hover .share-menu {
+    opacity: 1;
+    /* pointer-events: auto; */
+}
