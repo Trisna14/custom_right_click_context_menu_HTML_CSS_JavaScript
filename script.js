@@ -1,4 +1,5 @@
 const contextMenu = document.querySelector('.wrapper');
+const shareMenu = document.querySelector('.share-menu');
 
 document.addEventListener('contextmenu', e => {
     console.log('right btn');
@@ -7,21 +8,29 @@ document.addEventListener('contextmenu', e => {
 
     let x = e.offsetX;
     let y = e.offsetY;
-    console.log(x);
+    // console.log(x);
     // console.log(y);
+    console.log(shareMenu.offsetWidth); // lebar element share-menu
 
     let winWidth = window.innerWidth,
         winHeight = window.innerHeight,
         cmWidth = contextMenu.offsetWidth,
         cmHeight = contextMenu.offsetHeight;
 
+    if (x > (winWidth -cmWidth - shareMenu.offsetWidth)) {
+        shareMenu.style.left = '-200px';
+    } else {
+        shareMenu.style.left = '';
+        shareMenu.style.right = '-200px';
+    }
+
     x = x > winWidth - cmWidth ? winWidth - cmWidth : x;
     y = y > winHeight - cmHeight ? winHeight - cmHeight : y;
 
-    console.log(x);
+    // console.log(x);
     // console.log(y);
-    console.log(cmWidth +'lebar contextmenu');
-    console.log(winWidth + 'lebar window');
+    // console.log(cmWidth +'lebar contextmenu');
+    // console.log(winWidth + 'lebar window');
     // console.log(winHeight);
 
     contextMenu.style.left = `${x}px`;
